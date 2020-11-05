@@ -7,29 +7,22 @@ namespace MinimumSwaps
     {
         static void Main(string[] args)
         {
-            //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-            //int n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
 
-            //int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-
-            int[] arr = new int[] { 4, 3, 1, 2 };
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
 
             int res = minimumSwaps(arr);
 
-            //textWriter.WriteLine(res);
+            textWriter.WriteLine(res);
 
-            //textWriter.Flush();
-            //textWriter.Close();
+            textWriter.Flush();
+            textWriter.Close();
         }
 
-        static int minimumSwaps(int[] arr) // 4, 3, 1, 2  |  1, 2, 3 ,4
+        static int minimumSwaps(int[] arr)
         {
-            // 4 3 1 2  0
-            // 2 3 1 4  1
-            // 3 2 1 4  2
-            // 1 2 3 4  3
-
             int swaps = 0;
             for(int i = 0; i < arr.Length; i++)
             {
